@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+    width:100%;
+}
+body{
+    background-image: url('assets/chuck.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-wrapper{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.joke{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+}
+.joke-text{
+    color: white;
+    font-size: 34px;
+    font-weight: 500;
+    max-width: 800px;
+    text-align: center;
+}
+.joke-text p{
+    position:relative;
+    transition: right 1s;
+    transition: left 1s;
+}
+.change-joke-btn{
+    width:200px;
+    height:40px;
+    font-size: 18px;
+}
