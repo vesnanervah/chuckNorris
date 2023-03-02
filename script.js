@@ -5,16 +5,19 @@ let randomJokeUrl = 'https://api.chucknorris.io/jokes/random';
 async function getData() {
     const res = await fetch(randomJokeUrl);
     const data = await res.json();
-    insertNewJoke(data)
+    insertNewJoke(data);
+
 }
 
 function insertNewJoke(data){
-    let oldJoke = jokeText.querySelector('p');
-    oldJoke.remove();
-    let newJoke = document.createElement('p');
-    newJoke.textContent = data.value;
-    jokeText.append(newJoke);
+    let jokeContent = jokeText.querySelector('p');
+    jokeContent.style.top = '-100%'
+    jokeContent.ontransitionend = function(){
+        jokeContent.textContent = data.value;
+        jokeContent.style.top = '0px'   
+    }
 }
+
 
 changeJokeBtn.onclick = function(){
     getData();
