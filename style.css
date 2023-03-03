@@ -63,6 +63,12 @@ body{
     top:0px;    
 }
 
+.category-select{
+    border: none;
+    background-color: white;
+    border: solid 2px #ffa31a;
+    border-top: none;
+}
 
 
 
